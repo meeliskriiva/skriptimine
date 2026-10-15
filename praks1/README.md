@@ -1,0 +1,2 @@
+# skriptimine
+# skriptimine
