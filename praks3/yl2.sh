@@ -1,4 +1,4 @@
- !#/bash/bin
+ #!/bash/bin
 
  echo -n "Sisesta kandiku pikkus ja laius: "
  read k_pik k_lai
@@ -6,25 +6,25 @@
  read kyps_pik kyps_lai
  echo -n "Tordi kihtide arv: "
  read kihid
- echo -n "Mitu küpsist pakkis"
+ echo -n "Mitu küpsist pakkis: "
  read kogus
 
  #Kandiku pindala
- kanpind=$(expr k_pik \* $k_lai)
+ kanpind=$(expr $k_pik \* $k_lai)
  echo "Kandiku pindala kontrollimiseks on: $kandiku_pin"
  
  #Küpsiste pindala
- kypsis_pind=(expr $kyps_pik \* $kyps_lai )
+ kypsis_pind=$(expr $kyps_pik \* $kyps_lai )
  echo "Ühe küpsise pindala on $kypsise_pind"
  
  #Tordi pindala
- tordi_pind=(expr $kandiku_pind \* $kihid )
- echo "Tordi pindala on $pind"
+ tordi_pind=$(expr $kanpind \* $kihid )
+ echo "Tordi pindala on $tordi_pind"
  
  #Küpsiste arv
- kyps_arv=(expr $tordi_pind \* $kypsise_pind)
+ kyps_arv=$(expr $tordi_pind \* $kypsise_pind)
  echo "Küpsiste arv on $kyps_arv"
  
  #Pakkide arv
- pakkide_arv=(expr $kyps_arv / $kyps )
+ pakkide_arv=$(expr $kyps_arv / $kogus )
  echo "Küpsiste pakke on: $pakkide_arv"
