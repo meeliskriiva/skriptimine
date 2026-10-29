@@ -1,2 +1,1 @@
-# skriptimine
-# skriptimine
+# Skriptimis tunni tegevused
