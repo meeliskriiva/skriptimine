@@ -1,11 +1,11 @@
 #!/bin/bash
 
 muutujaX=001
-muutujaY=1
+muutujaY=001
 
 if [ $muutujaX = $muutujaY ]
 then
-	echo MuutujaX on sama, mis $muutujaY
+	echo $muutujaX on sama, mis $muutujaY
 fi
 
 if [ $muutujaX -eq $muutujaY ]
