@@ -2,7 +2,7 @@
 
  echo -n "Sisesta kandiku pikkus ja laius: "
  read k_pik k_lai
- echo -n "Sisesta küpsiste möödud: "
+ echo -n "Sisesta küpsiste mõõdud: "
  read kyps_pik kyps_lai
  echo -n "Tordi kihtide arv: "
  read kihid
@@ -28,3 +28,12 @@
  #Pakkide arv
  pakkide_arv=$( expr $kyps_arv / $kogus )
  echo "Küpsiste pakke on: $pakkide_arv"
+
+ jaak=$(expr $kyps_arv % $kogus)
+
+ if [ $jaak -ne 0 ]
+ then
+	 pakarv=$(expr $pakkide_arv + 1)
+ fi
+ sleep 2
+ echo Lõpptulemus: Selle tordi jaoks on vaja $pakkide_arv pakki küpsist.
