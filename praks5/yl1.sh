@@ -23,5 +23,7 @@ elif
 	test $vanus -ge 110
 then
 	echo Liiga suur number
+else
+	echo Proovi uuesti sisestada mõni number
 
 fi
