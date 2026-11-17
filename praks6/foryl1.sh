@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in 2 3 4 5; do
+for i in August Jaanuar Veebruar ; do
     echo "Kuud: $i"
 done
 
